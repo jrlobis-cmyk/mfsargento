@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sargento Bar — Est. 2024 | Makati, Philippines</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="pre-logo">SARGENTO</div>
+    <div class="pre-bar"></div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-logo">SARGENTO<span>BAR</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reservations">Reserve</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#reservations" class="nav-cta">Book a Table</a>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">&times;</button>
+  <ul>
+    <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+    <li><a href="#menu" onclick="closeMobileMenu()">Menu</a></li>
+    <li><a href="#reservations" onclick="closeMobileMenu()">Reserve</a></li>
+    <li><a href="#events" onclick="closeMobileMenu()">Events</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tagline">BALONGAY CALABANGA CAMARINES SUR</p>
+    <h1 class="hero-title">SARGENTO<br><span>BAR</span></h1>
+    <p class="hero-sub">Cold Drinks. Good Vibes. Pinoy Nights.</p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">See Our Menu</a>
+      <a href="#reservations" class="btn-secondary">Reserve a Table</a>
+    </div>
+  </div>
+  <div class="hero-scroll">↓ SCROLL</div>
+  <div class="hero-ticker">
+    <div class="ticker-inner">
+      <span>OPEN DAILY 5PM – 3AM</span>
+      <span>◆</span>
+      <span>SAN MIGUEL · TANDUAY · RED HORSE · EMPERADOR</span>
+      <span>◆</span>
+      <span>LIVE MUSIC FRIDAYS</span>
+      <span>◆</span>
+      <span>HAPPY HOUR 5–7PM</span>
+      <span>◆</span>
+      <span>OPEN DAILY 5PM – 3AM</span>
+      <span>◆</span>
+      <span>SAN MIGUEL · TANDUAY · RED HORSE · EMPERADOR</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip">
+  <div class="strip-grid">
+    <div class="strip-item"><span class="strip-num">01</span><p>Authentic Pinoy Bar Experience</p></div>
+    <div class="strip-item"><span class="strip-num">02</span><p>Cold Beer & Premium Spirits</p></div>
+    <div class="strip-item"><span class="strip-num">03</span><p>Pulutan & Local Favorites</p></div>
+    <div class="strip-item"><span class="strip-num">04</span><p>Live Music & Events</p></div>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu" class="menu-section">
+  <div class="section-header">
+    <p class="section-label">— OUR MENU —</p>
+    <h2>Drinks & Pulutan</h2>
+    <p class="section-sub">Order ahead for table service. Add to cart and pay on arrival.</p>
+  </div>
+  <div class="menu-tabs">
+    <button class="tab active" data-cat="all">All</button>
+    <button class="tab" data-cat="beer">Beer</button>
+    <button class="tab" data-cat="spirits">Spirits</button>
+    <button class="tab" data-cat="cocktails">Cocktails</button>
+    <button class="tab" data-cat="pulutan">Pulutan</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+  <div class="cart-bar" id="cartBar">
+    <div class="cart-info"><span id="cartCount">0</span> items &nbsp;|&nbsp; ₱<span id="cartTotal">0</span></div>
+    <button class="cart-checkout" onclick="checkout()">Checkout →</button>
+  </div>
+</section>
+
+<!-- RESERVATIONS -->
+<section id="reservations" class="reservations-section">
+  <div class="res-left">
+    <p class="section-label">— BOOK A TABLE —</p>
+    <h2>Reserve Your Spot</h2>
+    <p>Tables fill up fast on weekends. Secure your seat now — no deposit required.</p>
+    <div class="res-perks">
+      <div class="perk">🍺 Welcome drink on arrival</div>
+      <div class="perk">🎵 Priority seating near stage</div>
+      <div class="perk">🥳 Free birthday setup</div>
+    </div>
+  </div>
+  <div class="res-right">
+    <div class="res-form-card">
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" id="resName" placeholder="Juan dela Cruz"></div>
+        <div class="form-group"><label>Mobile</label><input type="tel" id="resMobile" placeholder="+63 9XX XXX XXXX"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Date</label><input type="date" id="resDate"></div>
+        <div class="form-group"><label>Time</label>
+          <select id="resTime">
+            <option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option>
+            <option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Guests</label>
+          <select id="resGuests">
+            <option>1–2</option><option>3–5</option><option>6–10</option><option>11–20 (group)</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Occasion</label>
+          <select id="resOccasion">
+            <option>Regular Night Out</option><option>Birthday</option><option>Despedida</option>
+            <option>Company Outing</option><option>Barkada Night</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label>Special Requests</label>
+        <textarea id="resNotes" placeholder="e.g., corner table, bring cake, etc."></textarea>
+      </div>
+      <button class="btn-primary full-width" onclick="submitReservation()">Confirm Reservation</button>
+      <div id="resMsg" class="res-msg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS & ANALYTICS -->
+<section class="stats-section">
+  <div class="section-header light">
+    <p class="section-label">— BY THE NUMBERS —</p>
+    <h2>Sargento at a Glance</h2>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num" data-target="1240">0</div><div class="stat-label">Happy Customers Monthly</div><div class="stat-bar"><div class="stat-fill" style="--w:82%"></div></div></div>
+    <div class="stat-card"><div class="stat-num" data-target="35">0</div><div class="stat-label">Drinks on the Menu</div><div class="stat-bar"><div class="stat-fill" style="--w:70%"></div></div></div>
+    <div class="stat-card"><div class="stat-num" data-target="98">0</div><div class="stat-label">% Customer Satisfaction</div><div class="stat-bar"><div class="stat-fill" style="--w:98%"></div></div></div>
+    <div class="stat-card"><div class="stat-num" data-target="4">0</div><div class="stat-label">Years of Good Times</div><div class="stat-bar"><div class="stat-fill" style="--w:40%"></div></div></div>
+  </div>
+  <div class="chart-section">
+    <div class="chart-header">
+      <p class="section-label">— ANALYTICS DASHBOARD —</p>
+      <h3>Weekly Footfall & Revenue</h3>
+    </div>
+    <div class="chart-wrapper"><canvas id="analyticsChart"></canvas></div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="events-section">
+  <div class="section-header">
+    <p class="section-label">— UPCOMING EVENTS —</p>
+    <h2>What's On</h2>
+  </div>
+  <div class="events-grid" id="eventsGrid"></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-header light">
+    <p class="section-label">— CUSTOMERS SAY —</p>
+    <h2>Sabi Nila</h2>
+  </div>
+  <div class="testimonial-slider">
+    <div class="testimonial-track" id="testimonialTrack">
+      <div class="testimonial-card">"Ang sarap ng Red Horse dito, lagi na kaming babalik!"<span>— Carlo M., Makati</span></div>
+      <div class="testimonial-card">"Best sisig in the area. The Tanduay cocktails hit different."<span>— Jasmine R., BGC</span></div>
+      <div class="testimonial-card">"Solid vibes, live music, and super sulit prices. Sargento is life!"<span>— Bong T., Pasig</span></div>
+      <div class="testimonial-card">"Reserved a table for 10, everything went smoothly. Highly recommend!"<span>— Ma. Luisa V., Mandaluyong</span></div>
+    </div>
+    <div class="t-controls">
+      <button onclick="prevTest()">←</button>
+      <button onclick="nextTest()">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-label">— FIND US —</p>
+      <h2>Get In Touch</h2>
+      <div class="contact-details">
+        <div class="cd-item">📍 <span>Barangay Balongay, Calabanga, Camarines Sur</span></div>
+        <div class="cd-item">📞 <span>+63 993 073 0685</span></div>
+        <div class="cd-item">📧 <span>hello@sargentobar.ph</span></div>
+        <div class="cd-item">🕔 <span>Mon–Sun: 5:00 PM – 3:00 AM</span></div>
+      </div>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d573.8007240139711!2d123.1339823968089!3d13.713615220951741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1778121895823!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">SARGENTO BAR</div>
+    <p>Cold drinks. Good vibes. Pinoy nights.</p>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Sargento Bar · Makati City, Philippines · All rights reserved.</p>
+    <p>Drink responsibly. 18+ only.</p>
+  </div>
+</footer>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <h3>Your Order Summary</h3>
+    <div id="orderSummary"></div>
+    <div class="order-total">Total: ₱<span id="orderTotal">0</span></div>
+    <input type="text" id="orderName" placeholder="Your name" class="modal-input">
+    <input type="tel" id="orderPhone" placeholder="Mobile number" class="modal-input">
+    <p style="font-size:0.8rem;color:#aaa;margin-bottom:12px;">Pay on arrival. We'll hold your order for your table.</p>
+    <button class="btn-primary full-width" onclick="placeOrder()">Place Order</button>
+    <div id="orderMsg" style="margin-top:10px;text-align:center;color:#c8a84b;"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
