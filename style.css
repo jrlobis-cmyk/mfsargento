@@ -784,3 +784,227 @@ body {
   .events-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 5rem; }
 }
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  #navbar {
+    padding: 14px 20px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 90vh;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .hero-scroll {
+    bottom: 100px;
+  }
+
+  /* TICKER */
+  .ticker-inner {
+    gap: 30px;
+    font-size: 0.65rem;
+  }
+
+  /* STRIP */
+  .strip-item {
+    padding: 24px 20px;
+  }
+
+  .strip-num {
+    font-size: 2.2rem;
+  }
+
+  /* SECTION HEADERS */
+  .section-header {
+    padding: 60px 16px 30px;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  /* MENU */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .menu-card img {
+    height: 220px;
+  }
+
+  .menu-card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu-tabs {
+    padding: 0 16px 30px;
+    gap: 8px;
+  }
+
+  .tab {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+
+  /* CART */
+  .cart-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .cart-checkout {
+    width: 100%;
+  }
+
+  /* RESERVATION */
+  .reservations-section {
+    padding: 60px 16px;
+    gap: 40px;
+  }
+
+  .res-form-card {
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  /* STATS */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px 40px;
+  }
+
+  .stat-card {
+    padding: 24px 18px;
+  }
+
+  .stat-num {
+    font-size: 2.8rem;
+  }
+
+  .chart-wrapper {
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  /* EVENTS */
+  .events-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-card {
+    padding: 24px 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 60px 16px;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .contact-map iframe {
+    height: 250px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 50px 20px 24px;
+  }
+
+  .footer-logo {
+    font-size: 2rem;
+  }
+
+  /* MODAL */
+  .modal {
+    width: 95%;
+    padding: 24px 18px;
+  }
+
+  .modal h3 {
+    font-size: 1.5rem;
+  }
+
+}
